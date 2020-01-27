@@ -1,0 +1,8 @@
+﻿  Source.cpp
+C:\Users\aligh\source\repos\ajshdflkahdfk\ajshdflkahdfk\Source.cpp(69): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aligh\source\repos\ajshdflkahdfk\ajshdflkahdfk\Source.cpp(73): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aligh\source\repos\ajshdflkahdfk\ajshdflkahdfk\Source.cpp(205): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aligh\source\repos\ajshdflkahdfk\ajshdflkahdfk\Source.cpp(237): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aligh\source\repos\ajshdflkahdfk\ajshdflkahdfk\Source.cpp(264): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aligh\source\repos\ajshdflkahdfk\ajshdflkahdfk\Source.cpp(270): warning C4018: '<': signed/unsigned mismatch
+  ajshdflkahdfk.vcxproj -> C:\Users\aligh\source\repos\ajshdflkahdfk\Debug\ajshdflkahdfk.exe

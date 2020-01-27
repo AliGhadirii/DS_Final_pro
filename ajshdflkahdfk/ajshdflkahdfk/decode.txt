@@ -1,0 +1,58 @@
+main: 
+addi $sp, $sp, -16
+sw $ra, 0($sp)
+sw $s0, 4($sp)
+sw $s1, 8($sp)
+sw $s2, 12($sp)
+la $a0, firstMatrix
+jal print_matrix
+jal print_new_line
+la $a0, secondMatrix
+jal print_matrix
+la $a0, firstMatrix
+la $a1, secondMatrix
+la $a2, newMatrix
+jal matrix_mult
+jal print_new_line
+jal print_new_line
+la $a0, newMatrix
+jal print_matrix
+li $v0, 10
+syscall
+lw $s2, 12($sp)
+lw $s1, 8($sp)
+lw $s0, 4($sp)
+lw $ra, 0($sp)
+addi $sp, $sp, 16
+jr $ra
+matrix_mult:
+addi $sp, $sp, -32
+sw $ra, 0($sp)
+sw $s0, 4($sp)
+sw $s1, 8($sp)
+sw $s2, 12($sp)
+sw $s3, 16($sp)
+sw $s4, 20($sp)
+sw $s5, 24($sp)
+sw $s6, 28($sp)
+or $s0, $s0, $a0
+or $s1, $s1, $a1
+or $s2, $s2, $a2
+ori $s3, $s3, 0
+ori $s4, $s4, 0
+ori $s5, $s5, 0
+ori $s6, $s6, 4
+matrix_mult_loop1:
+li $s4, 0 
+matrix_mult_loop2:
+li $s5, 0 
+li.d $f6, 0
+matrix_mult_loop3:
+mult $s3, $s6
+mflo $t0
+add $t1, $t0, $s5
+sll $t1, $t1, 3
+add $t2, $t1,$s0
+l.d $f0, 0($t2)
+mult $s5, $s6
+mflo $t0
